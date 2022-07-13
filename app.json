@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "react-native-instagram-gallery",
+    "slug": "react-native-instagram-gallery",
+    "owner": "enesozturk",
+    "version": "1.0.0",
+    "sdkVersion": "44.0.0",
+    "scheme": "com.react-native-instagram-gallery.example",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "bundleIdentifier": "com.react-native-instagram-gallery.example"
+    }
+  }
+}
