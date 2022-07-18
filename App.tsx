@@ -1,28 +1,30 @@
-import React from 'react'
-import { LogBox, View } from 'react-native'
+import React from "react";
+import { LogBox, View } from "react-native";
 
-import { PortalProvider } from '@gorhom/portal'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { PortalProvider } from "@gorhom/portal";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import useSWR from "swr";
 
-import Home from './screens/Home'
-import DetailScreen from './screens/Details'
-import { DetailScreenProvider } from './context/detail-screen'
-import useAnimatedValues from './hooks/use-animated-values'
+import Home from "./screens/Home";
+import DetailScreen from "./screens/Details";
+import { DetailScreenProvider } from "./context/detail-screen";
+import useAnimatedValues from "./hooks/use-animated-values";
+import { UNSPLASH_API_URL } from "./constants/api";
 
 LogBox.ignoreLogs([
-  'Possible stableId',
-  'estimatedItemSize',
+  "Possible stableId",
+  "estimatedItemSize",
   "Looks like you're",
-  'Require cycle:',
-])
+  "Require cycle:",
+]);
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const { animatedRef, pageX, pageY, active, headerHeight } =
-    useAnimatedValues()
+    useAnimatedValues();
 
   return (
     <SafeAreaProvider>
@@ -30,8 +32,8 @@ export default function App() {
         <View
           style={{
             flex: 1,
-            height: '100%',
-            backgroundColor: 'rgba(0,0,0,0.3)',
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.3)",
           }}
         >
           <DetailScreenProvider>
@@ -69,5 +71,5 @@ export default function App() {
         </View>
       </PortalProvider>
     </SafeAreaProvider>
-  )
+  );
 }

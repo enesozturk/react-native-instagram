@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import Animated, { useAnimatedStyle } from 'react-native-reanimated'
-import { SCREEN_WIDTH } from '@gorhom/bottom-sheet'
+import Animated, { useAnimatedStyle } from "react-native-reanimated";
+import { SCREEN_WIDTH } from "@gorhom/bottom-sheet";
 
-import FastImage from 'react-native-fast-image'
+import FastImage from "react-native-fast-image";
 
-const AnimatedFastImage = Animated.createAnimatedComponent(FastImage)
+const AnimatedFastImage = Animated.createAnimatedComponent(FastImage);
 
 export const ImageDetailListItem = ({ active, url, animate }) => {
   const animatedImageStyles = useAnimatedStyle(() => {
@@ -13,8 +13,8 @@ export const ImageDetailListItem = ({ active, url, animate }) => {
       width: SCREEN_WIDTH,
       height: SCREEN_WIDTH,
       marginTop: 0,
-    }
-  }, [active])
+    };
+  }, [active]);
 
   return (
     <AnimatedFastImage
@@ -23,9 +23,9 @@ export const ImageDetailListItem = ({ active, url, animate }) => {
         uri: url,
         priority: FastImage.priority.normal,
       }}
-      resizeMode={FastImage.resizeMode.contain}
+      resizeMode={FastImage.resizeMode.cover}
     />
-  )
-}
+  );
+};
 
-export default ImageDetailListItem
+export default ImageDetailListItem;

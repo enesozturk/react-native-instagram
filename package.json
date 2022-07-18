@@ -23,7 +23,8 @@
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "3.11.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "swr": "^1.3.0"
   },
   "resolutions": {
     "@react-navigation/native-stack": "aleqsio/react-navigation-fix-transition.git#react-navigation-native-stack-v6.6.2-gitpkg"

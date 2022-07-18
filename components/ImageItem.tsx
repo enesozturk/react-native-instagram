@@ -1,18 +1,18 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo, useEffect } from "react";
 
 import Animated, {
   Extrapolate,
   interpolate,
   useAnimatedStyle,
   useSharedValue,
-} from 'react-native-reanimated'
-import { CARD_LIST_SIZE } from '../constants/ui'
-import { SCREEN_WIDTH } from '@gorhom/bottom-sheet'
+} from "react-native-reanimated";
+import { CARD_LIST_SIZE } from "../constants/ui";
+import { SCREEN_WIDTH } from "@gorhom/bottom-sheet";
 
-import FastImage from 'react-native-fast-image'
-import { IMAGE_HEADER_HEIGHT } from '../constants/ui'
+import FastImage from "react-native-fast-image";
+import { IMAGE_HEADER_HEIGHT } from "../constants/ui";
 
-const AnimatedFastImage = Animated.createAnimatedComponent(FastImage)
+const AnimatedFastImage = Animated.createAnimatedComponent(FastImage);
 
 export const ImageItem = ({ active, url, animate }) => {
   const animatedImageStyles = useAnimatedStyle(() => {
@@ -21,7 +21,7 @@ export const ImageItem = ({ active, url, animate }) => {
       [0, 1],
       [CARD_LIST_SIZE, SCREEN_WIDTH],
       Extrapolate.CLAMP
-    )
+    );
     return {
       width: animate ? size : CARD_LIST_SIZE,
       height: animate ? size : CARD_LIST_SIZE,
@@ -33,8 +33,8 @@ export const ImageItem = ({ active, url, animate }) => {
             Extrapolate.CLAMP
           )
         : 0,
-    }
-  }, [active])
+    };
+  }, [active]);
 
   return (
     <AnimatedFastImage
@@ -43,9 +43,9 @@ export const ImageItem = ({ active, url, animate }) => {
         uri: url,
         priority: FastImage.priority.normal,
       }}
-      resizeMode={FastImage.resizeMode.contain}
+      resizeMode={FastImage.resizeMode.cover}
     />
-  )
-}
+  );
+};
 
-export default ImageItem
+export default ImageItem;
