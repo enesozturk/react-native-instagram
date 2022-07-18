@@ -43,9 +43,9 @@ In this project, I used Unsplash API to get awesome images. To try on your own, 
 
 ## Challanges
 
-- [] Custom list inside details screen. Just like the Instagram, in every detail screen, we can implement new lists by fetching another query. Currently, it's just rendering FlashList with only selected image.
-- [] (This is related to previous todo 👆. After scrolling down in details list, when close the details screen, we can do show first image by fading or change the original one with the last image scrolled.
-- [] Integrating this with the React Navigation would be super cool.
+- [ ] Custom list inside details screen. Just like the Instagram, in every detail screen, we can implement new lists by fetching another query. Currently, it's just rendering FlashList with only selected image.
+  - [ ] After scrolling down in details list, when close the details screen, we can do show first image by fading or change the original one with the last image scrolled.
+- [ ] Integrating this with the React Navigation would be super cool.
 
 ## License
 
