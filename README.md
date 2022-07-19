@@ -13,6 +13,8 @@ This is an experimental project. I have always been impressed with Instagram's i
 - TypeScript
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/)
+- [FlashList](https://github.com/shopify/flash-list)
+- [React Native Fast Image](https://github.com/DylanVann/react-native-fast-image)
 - [SWR](https://swr.vercel.app/) for requests
 - [Unsplash API](https://unsplash.com/developers) for awesome images.
 
