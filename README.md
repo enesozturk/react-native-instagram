@@ -5,7 +5,8 @@
     <h1 align="center">React Native Instagram Page Transition</h1>
 </p>
 
-This is an experimental project. I have always been impressed with Instagram's iOS page transitions. In this repo, I tried to implement same with the following technologies. The result was much better than I expected.
+> **Warning**
+> This is an experimental project. I have always been impressed with Instagram's iOS page transitions. I tried to implement the same with the following technologies. The result was much better than I expected. There are still some things to do to provide the same experience. Using it in production is not recommended.
 
 ## Stack
 
@@ -43,8 +44,9 @@ That's it, enjoy 🤞🏽
 
 In this project, I used Unsplash API to get awesome images. To try on your own, you'll need to create and app on Unsplash dashboard and get the Client ID and replace that id in the `/constants/api.ts` with `YOUR_UNSPLASH_CLIENT_ID`.
 
-## Challanges
+## Challanges / Todo's
 
+- [ ] Integrate with the [transition api](https://github.com/software-mansion/react-native-reanimated/pull/2561) from Reanimated.
 - [ ] Custom list inside details screen. Just like the Instagram, in every detail screen, we can implement new lists by fetching another query. Currently, it's just rendering FlashList with only selected image.
   - [ ] After scrolling down in details list, when close the details screen, we can do show first image by fading or change the original one with the last image scrolled.
 - [ ] Integrating this with the React Navigation would be super cool.
