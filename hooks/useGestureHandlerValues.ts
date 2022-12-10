@@ -51,12 +51,7 @@ const useGestureHandlerValues = ({ active }) => {
         const distanceHipo = getHipotenus(offsetX, offsetY);
 
         if (distanceHipo > 100 || velocityHipo > 500) {
-          active.value = withSpring(0, SPRING_CONFIGURATION, (finished) => {
-            if (finished) {
-              startX.value = 0;
-              startY.value = 0;
-            }
-          });
+          active.value = withSpring(0, SPRING_CONFIGURATION);
         }
       }
     })
@@ -64,6 +59,8 @@ const useGestureHandlerValues = ({ active }) => {
       if (active) {
         isPressed.value = false;
       }
+      startX.value = 0
+      startY.value = 0
     });
 
   return {
